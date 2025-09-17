@@ -15,3 +15,5 @@ console.log(typeof(logica));
 var qualquer;
 console.log(qualquer);
 console.log(typeof(qualquer));
+
+// comentário para teste de git 
