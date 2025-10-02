@@ -16,7 +16,7 @@ class Pessoa {
     if(endereco instanceof Endereco)
      {
        this.#endereco = endereco;
-       endereco.setPessoa(this); // referencia cruzada
+       endereco.addPessoa(this); // referencia cruzada
        return true;
      }else{
        return false;
@@ -30,7 +30,7 @@ class Pessoa {
   addTelefone(telefone){
     if (telefone instanceof Telefone){
       this.#telefones.push(telefone);
-      telefone.setPessoa(this); // referencia cruzada
+      telefone.addPessoa(this); // referencia cruzada
       return true;
     }else{
       return false;
