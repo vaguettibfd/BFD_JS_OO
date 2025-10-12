@@ -3,7 +3,8 @@
 // Objetivo do exemplo : demonstrar conceitos de encapsulamento adicionados de condicionais
 
 const Telefone = require('./Telefone');
-const Endereco = require('./Endereco');
+//const Endereco = require('./ENDERECO/Endereco.mjs');
+import Endereco from './ENDERECO/Endereco.mjs';
 
 class Pessoa {
   #nome;
