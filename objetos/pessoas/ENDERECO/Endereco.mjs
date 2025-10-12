@@ -8,8 +8,21 @@ export default class Endereco {
   #cidade;
   #uf;
   #regiao;
+ //========================================
+  #pessoas = []
+  addPessoa(pessoa){
+   if(pessoa){
+        this.#pessoas.push(pessoa);
+        return true;
+   }else{
+       return false;
+   }
+  }
+  getPessoas(){
+   return this.#pessoas;
+  }
 
-
+ //=====================================
   // Método assíncrono que busca e define os dados do endereço
   async setCep(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`;
