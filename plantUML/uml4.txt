@@ -7,6 +7,8 @@ class Pessoa {
  + getNome() : String
  + setEmail(String email) : boolean
  + getEmail() : String
+ + setConta(Conta conta) : boolean
+ + getConta() : Conta
 }
 class PF {
  - cpf : String
@@ -22,6 +24,16 @@ class PJ {
 Pessoa <|-- PF
 Pessoa <|-- PJ
 
+class Conta{
+    - user : String
+    - password : String
+    + setUser(String user) : boolean
+    + getUser() : String
+    + setPassword(String password) : boolean
+    + login(String user, String password) : boolean
+    + setPessoa(Pessoa pessoa) : boolean
+    + getPessoa() : Pessoa 
+}
 
-
+Pessoa "1" -- "1" Conta
 @enduml

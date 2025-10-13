@@ -18,11 +18,15 @@ class PF {
  - cpf : String
  + setCpf(String cpf) : boolean
  + getCpf() : String
+ + setTitulo(Titulo titulo) : boolean
+ + getTitulo() : Titulo
 }
 class PJ {
  - cnpj : String
  + setCNPJ(String cnpj) : boolean
  + getCNPJ() : String
+ + addFilial(PJ filial) : boolean
+ + getListFilial(): PJ[]
 }
 
 Pessoa <|-- PF
@@ -64,4 +68,22 @@ class Telefone {
 
 Pessoa "1..*" -- "1" Endereco
 Pessoa "1..*" -- "0..3" Telefone
+
+class Titulo{
+- numero : String
+- zona :String
+- secao : String
++ setNumero(String numero) : boolean
++ getNumero() : String
++ setZona(String zona) : boolean
++ getZona() : String
++ setSecao(String secao) : boolean
++ getNumero() : String
++ setPF(PF pf) : boolean
++ getPF(): PF 
+}
+PF  *-- Titulo
+
+PJ o-- "0..*" PJ  : Filial 
+
 @enduml
