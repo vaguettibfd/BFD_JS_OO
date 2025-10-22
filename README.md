@@ -10,6 +10,7 @@ O repositório está estruturado para demonstrar, de forma progressiva, desde va
 
 ## 🧱 Estrutura do Projeto
 
+```
 BFD_JS_OO-main/
 │
 ├── arrays.js # Manipulação de arrays
@@ -56,6 +57,8 @@ BFD_JS_OO-main/
 │ └── uml1.txt # Diagrama UML dos relacionamentos
 │
 └── package.json # Dependências do projeto
+```
+
 
 ---
 
@@ -92,15 +95,16 @@ BFD_JS_OO-main/
 
 O projeto inclui o arquivo plantUML/uml1.txt que pode ser visualizado via PlantUML
 :
-
+```
 @startuml
 Pessoa <|-- PF
 Pessoa <|-- PJ
-PF --> Titulo
-PJ --> PJDAO
-Pessoa --> Endereco
-Pessoa --> Telefone
+PF -- Titulo
+PJ -- IE
+Pessoa -- Endereco
+Pessoa -- Telefone
 @enduml
+````
 
 ## 👨‍🏫 Finalidade Didática
 
@@ -114,7 +118,9 @@ Este repositório está licenciado sob a MIT License
 ## ✍️ Autor
 
 Prof. Dr.. Leandro Vaguetti
+
 📘 Instituto Federal de Brasília — IFB
+
 📫 Contato: leandro.vaguetti@ifb.edu.br
 
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/vaguettibfd/BFD_JS_OO)
